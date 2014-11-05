@@ -1,0 +1,56 @@
+
+pac（proxy autoconfiguration）文件其实就是一个 JavaScript 文件，文件扩展名是什么其实没有关系，但一般都名为 pac。
+
+
+=====================================
+//使用var来定义代理
+//貌似名称不能带数字和中文???
+
+var mode="SOCKS5 127.0.0.1:12450";
+// 本地 12450 端口的 socks5 代理    
+
+或者:
+var mode="PROXY api.youku.com:80"
+// 本地 80 端口的 http 代理
+
+==========================================
+pac 文件中必须包含 FindProxyForURL(url, host) 的函数，
+支持 pac 自动代理的浏览器将会根据这个函数来判断当前访问的网址走何种通道。
+
+示例如下：
+
+1:-----------
+function FindProxyForURL(url, host) {
+    return 'DIRECT';
+}
+//上面那段代码说明对于所有 url，都直连，不走任何代理。
+1:----------------
+
+2:------------------
+function FindProxyForURL(url,host){
+if (shExpMatch(host,"*.example.com"))						return mode;	
+
+ return 'DIRECT';
+}
+//上面那段代码说明对于主机符合，使用代理"mode"(上面已定义好名称),否则即直连
+
+2---------------
+
+if (shExpMatch(url,"*.example.com"))
+						return coouuo;	
+return "DIRECT";
+}
+
+
+
+
+
+
+//????貌似默认不支持正则表达式? 求确认.
+
+
+
+
+
+
+
