@@ -1,6 +1,8 @@
 
 pac（proxy autoconfiguration）文件其实就是一个 JavaScript 文件，文件扩展名是什么其实没有关系，但一般都名为 pac。
 
+PAC文件编码
+有些浏览器，例如Firefox和Internet Explorer只支持系统缺省编码的PAC文件，不支持Unicode编码的PAC文件，例如UTF-8编码的PAC文件。
 
 =====================================
 //使用var来定义代理
