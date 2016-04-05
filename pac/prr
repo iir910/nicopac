@@ -1,0 +1,15 @@
+var fq='socks5 127.0.0.1:5050';
+var zl='DIRECT';
+
+
+function FindProxyForURL(url, host) {
+    if (shExpMatch(host, "*.google.com")) {
+        return fq;
+    }
+    if (shExpMatch(host, "*.googleapis.com")) {
+        return fq;
+    }
+
+
+    return zl ;
+}
