@@ -7,7 +7,7 @@ function FindProxyForURL(url, host) {
         return fq;
     }
 
-    if (shExpMatch(host, "*google*.com")) {
+    if (shExpMatch(url, "*google*.com*")) {
         return fq;
     }
 
