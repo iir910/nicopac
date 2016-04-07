@@ -3,9 +3,7 @@ var zl='DIRECT';
 
 
 function FindProxyForURL(url, host) {
-    if (shExpMatch(host, "twitter.com")) {
-        return fq;
-    }
+    
 
     if (shExpMatch(url, "*google*.com*")) {
         return fq;
