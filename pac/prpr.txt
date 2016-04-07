@@ -6,7 +6,8 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(host, "twitter.com")) {
         return fq;
     }
-    if (shExpMatch(host, "*.googleapis.com")) {
+
+    if (shExpMatch(host, "*google*.com")) {
         return fq;
     }
 
