@@ -14,11 +14,11 @@ function FindProxyForURL(url, host) {
         return fq;
     }
 
-    if (shExpMatch(url, du)) {
+    if (shExpMatch(host, du)) {
         return fq;
     }
 
-    if (shExpMatch(url, sns)) {
+    if (shExpMatch(host, sns)) {
         return fq;
     }
 
