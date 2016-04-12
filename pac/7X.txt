@@ -2,9 +2,11 @@
 var fq='socks5 127.0.0.1:5050';
 var zl='DIRECT';
 
+
 var gg="*google*.com*|*.gstatic.com"
 
 var sns="twitter.com|*.facebook.com"
+
 var du="*.hk|*.jp|*.tw"
 
 function FindProxyForURL(url, host) {
@@ -13,6 +15,10 @@ function FindProxyForURL(url, host) {
     }
 
     if (shExpMatch(url, du)) {
+        return fq;
+    }
+
+    if (shExpMatch(url, sns)) {
         return fq;
     }
 
