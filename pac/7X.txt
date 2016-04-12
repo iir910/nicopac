@@ -3,7 +3,7 @@ var fq='socks5 127.0.0.1:5050';
 var zl='DIRECT';
 
 
-var gg="*google*.com*|*.gstatic.com"
+var gg="*google*|*.gstatic.com"
 
 var sns="twitter.com|*.facebook.com"
 
