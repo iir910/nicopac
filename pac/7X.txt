@@ -3,25 +3,30 @@ var fq='socks5 127.0.0.1:5050';
 var zl='DIRECT';
 
 
-var gg="*google*|*.gstatic.com"
+var gg="*google*|*.gstatic.com|*.ggpht.com"
 
-var sns="twitter.com|*.facebook.com"
+var sns="twitter.com|*.twimg.com|*.facebook.com|*.fbcdn.net"
 
-var du="*.hk|*.jp|*.tw"
+var dq="*.hk|*.jp|*.tw|*.us"
+var vd="*.youtube.com|*.ytimg.com"
+
+//var news=
 
 function FindProxyForURL(url, host) {
     if (shExpMatch(host, gg)) {
         return fq;
     }
 
-    if (shExpMatch(host, du)) {
+    if (shExpMatch(host, dq)) {
         return fq;
     }
 
     if (shExpMatch(host, sns)) {
         return fq;
     }
-
+    if (shExpMatch(host, vd)) {
+        return fq;
+    }
 
     return zl ;
 }
