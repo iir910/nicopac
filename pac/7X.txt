@@ -10,6 +10,8 @@ var sns="twitter.com|*.twimg.com|*.facebook.com|*.fbcdn.net"
 var dq="*.hk|*.jp|*.tw|*.us"
 var vd="*.youtube.com|*.ytimg.com"
 
+var qt="*.wikipedia.org"
+
 //var news=
 
 function FindProxyForURL(url, host) {
@@ -25,6 +27,9 @@ function FindProxyForURL(url, host) {
         return fq;
     }
     if (shExpMatch(host, vd)) {
+        return fq;
+    }
+    if (shExpMatch(host, qt)) {
         return fq;
     }
 
