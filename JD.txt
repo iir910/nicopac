@@ -1,0 +1,16 @@
+var fq='_proxy_';
+var zl='DIRECT';
+
+
+var gg="*google.com"|"*.google.com.hk"|"*.gstatic.com|*.ggpht.com"|"*.doubleclick.net"|"*.googleusercontent.com"
+
+
+function FindProxyForURL(url, host) {
+    if (shExpMatch(host, gg)) {
+        return fq;
+    }
+
+  
+
+    return zl ;
+}
