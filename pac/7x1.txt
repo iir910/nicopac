@@ -1,0 +1,36 @@
+var fq='proxy 127.0.0.1:5050';
+var zl='DIRECT';
+
+
+var gg="*google.com|*.google.com.hk|*.gstatic.com|*.ggpht.com|*.doubleclick.net|*.googleusercontent.com"
+
+var sns="twitter.com|*.twimg.com|*.facebook.com|*.fbcdn.net"
+
+var dq="*.hk|*.jp|*.tw|*.us"
+var vd="*.youtube.com|*.ytimg.com"
+
+var qt="*.wikipedia.org"
+
+
+
+function FindProxyForURL(url, host) {
+    if (shExpMatch(host, gg)) {
+        return fq;
+    }
+
+    if (shExpMatch(host, dq)) {
+        return fq;
+    }
+
+    if (shExpMatch(host, sns)) {
+        return fq;
+    }
+    if (shExpMatch(host, vd)) {
+        return fq;
+    }
+    if (shExpMatch(host, qt)) {
+        return fq;
+    }
+
+    return zl ;
+}
