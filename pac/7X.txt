@@ -12,7 +12,7 @@ var vd="*.youtube.com|*.ytimg.com"
 
 var qt="*.wikipedia.org"
 
-//var news=
+
 
 function FindProxyForURL(url, host) {
     if (shExpMatch(host, gg)) {
