@@ -1,5 +1,5 @@
 
-var fq='socks5 127.0.0.1:5050';
+var fq='proxy 127.0.0.1:5050';
 var zl='DIRECT';
 
 
