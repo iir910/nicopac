@@ -2,7 +2,7 @@ var fq='proxy 127.0.0.1:5050';
 var zl='DIRECT';
 
 
-var gg="*google*.com|*.google.com.hk|*.gstatic.com|*.ggpht.com|*.doubleclick.net|*.googleusercontent.com"
+var gg="*.google.com|*.googleapis.com|translate.googleapis.com|*.gstatic.com|*.ggpht.com|*.googleusercontent.com"
 
 var sns="twitter.com|*.twimg.com|*.facebook.com|*.fbcdn.net"
 
@@ -11,6 +11,8 @@ var vd="*.youtube.com|*.ytimg.com"
 
 var qt="*.wikipedia.org"
 
+var img=“chan.sankakucomplex.com”
+
 
 
 function FindProxyForURL(url, host) {
@@ -18,6 +20,11 @@ function FindProxyForURL(url, host) {
         return fq;
     }
 
+if (shExpMatch(url, gg)) {
+        return fq;
+    }
+    
+    
     if (shExpMatch(host, dq)) {
         return fq;
     }
@@ -31,6 +38,11 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(host, qt)) {
         return fq;
     }
+  if (shExpMatch(host, img)) {
+        return fq;
+    }
+
+
 
     return zl ;
 }
