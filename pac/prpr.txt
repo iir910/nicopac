@@ -2,14 +2,7 @@ var fq='proxy 127.0.0.1:5050';
 var zl='DIRECT';
 
 
-var gg="*.google.com|*.google.com.hk|*.google.co.jp|*.googleapis.com|*.google*.com|*.gstatic.com|*.ggpht.com|*.googleusercontent.com"
-
-var sns="twitter.com|*.twimg.com|*.facebook.com|*.fbcdn.net"
-
-
-var vd="*.youtube.com|*.ytimg.com"
-
-
+var gg="*.google.com|*.google.com.hk|*.google.co.jp|*.googleapis.com|*.gstatic.com|*.ggpht.com|*.googleusercontent.com|*.google*.com"
 
 
 
@@ -19,21 +12,6 @@ function FindProxyForURL(url, host) {
     }
 
     
-    if (shExpMatch(host, dq)) {
-        return fq;
-    }
 
-    if (shExpMatch(host, sns)) {
-        return fq;
-    }
-    if (shExpMatch(host, vd)) {
-        return fq;
-    }
-    if (shExpMatch(host, qt)) {
-        return fq;
-    }
-    if (shExpMatch(host, cg)) {
-        return fq;
-    }
     return zl ;
 }
