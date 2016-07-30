@@ -2,7 +2,7 @@ var fq='proxy 127.0.0.1:5050';
 var zl='DIRECT';
 
 
-var gg="*.google.com|*.google.com.hk|*.google.co.jp|*.googleapis.com|translate.googleapis.com|*.gstatic.com|*.ggpht.com|*.googleusercontent.com"
+var gg="*.google.com|*.google.com.hk|*.google.co.jp|*.googleapis.com|*.google*.com|*.gstatic.com|*.ggpht.com|*.googleusercontent.com"
 
 var sns="twitter.com|*.twimg.com|*.facebook.com|*.fbcdn.net"
 
