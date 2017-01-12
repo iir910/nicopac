@@ -1,0 +1,17 @@
+var fq='proxy 127.0.0.1:5050';
+var zl='DIRECT';
+
+
+var gg="*.yinxiang.com"
+
+
+
+function FindProxyForURL(url, host) {
+    if (shExpMatch(host, gg)) {
+        return fq;
+    }
+
+    
+
+    return zl ;
+}
