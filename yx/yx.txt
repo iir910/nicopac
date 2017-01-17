@@ -1,0 +1,15 @@
+var fq='socks5 127.0.0.1:5540';
+var zl='DIRECT';
+
+
+function FindProxyForURL(url, host) {
+    if (shExpMatch(host, "app.yinxiang.com")) {
+        return fq;
+    }
+    if (shExpMatch(host, "ssl.googleapis.com")) {
+        return fq;
+    }
+
+
+    return zl ;
+}
